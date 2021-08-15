@@ -1,0 +1,13 @@
+{
+  "name": "@pixel-dust/root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": {
+    "packages": ["packages/**"]
+  },
+  "scripts": {
+    "start": "lerna exec --scope @pixel-dust/example -- yarn start"
+  }
+}
