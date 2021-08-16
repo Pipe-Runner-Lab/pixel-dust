@@ -3,5 +3,19 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/uuid": "^8.3.1"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js --watch"
+  },
+  "dependencies": {
+    "postcss": "^8.3.6",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rxjs": "^7.3.0",
+    "uuid": "^8.3.2"
+  }
 }
