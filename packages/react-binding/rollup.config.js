@@ -1,13 +1,11 @@
 import typescript from "@rollup/plugin-typescript";
 import babel from "@rollup/plugin-babel";
 
-const isDevelopment = process.env.ROLLUP_WATCH;
-
 export default {
   input: "src/index.ts",
   output: {
     dir: "dist",
-    sourcemap: isDevelopment,
+    sourcemap: true,
   },
   plugins: [
     typescript(),
@@ -15,5 +13,5 @@ export default {
       babelHelpers: "inline",
     }),
   ],
-  external: ["react"],
+  external: ["react", "rxjs/operators", "rxjs" , "uuid"],
 };

@@ -4,21 +4,17 @@
   "main": "dist/index.js",
   "license": "MIT",
   "private": false,
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
-    "@rollup/plugin-babel": "^5.3.0"
-  },
   "peerDependencies": {
-    "@pixel-dust/base": "1.0.0",
+    "@pixel-dust/base": "^1.0.0",
     "react": "^17.0.2"
   },
   "scripts": {
-    "clean": "rimraf dist",
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch"
+  },
+  "devDependencies": {
+    "rollup": "^2.56.3",
+    "tslib": "^2.3.1",
+    "@pixel-dust/base": "^1.0.0"
   }
 }

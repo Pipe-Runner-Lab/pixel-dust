@@ -1,10 +1,8 @@
 {
-  "name": "@pixel-dust/example",
+  "name": "@pixel-dust/website",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@pixel-dust/base": "1.0.0",
-    "@pixel-dust/react": "1.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -19,11 +17,11 @@
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.0",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@pixel-dust/base": "^1.0.0",
+    "@pixel-dust/react": "^1.0.0"
   },
   "scripts": {
-    "clean": "rimraf build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,10 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/react-color": "^3.0.5",
-    "@types/react-custom-scrollbars": "^4.0.8",
-    "@types/styled-components": "^5.1.12"
   }
 }
