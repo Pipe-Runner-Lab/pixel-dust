@@ -12,13 +12,13 @@
   },
   "scripts": {
     "clean": "lerna clean",
-    "dev": "lerna run start --stream",
+    "dev": "lerna run start --stream --parallel",
     "build": "lerna run build --stream",
-    "dev:base": "lerna --scope @pixel-dust/base run start --stream",
-    "build:base": "lerna --scope @pixel-dust/base run build --stream",
-    "dev:react": "lerna --scope @pixel-dust/react run start --stream",
-    "build:react": "lerna --scope @pixel-dust/react run build --stream",
-    "dev:website": "lerna --scope @pixel-dust/website run start --stream",
-    "build:website": "lerna --scope @pixel-dust/website run build --stream"
+    "base:dev": "lerna --scope @pixel-dust/base run start --stream",
+    "base:build": "lerna --scope @pixel-dust/base run build --stream",
+    "react:dev": "lerna --scope @pixel-dust/react run start --stream",
+    "react:build": "lerna --scope @pixel-dust/react run build --stream",
+    "website:dev": "lerna --scope @pixel-dust/website run start --stream",
+    "website:build": "lerna --scope @pixel-dust/website run build --stream"
   }
 }
