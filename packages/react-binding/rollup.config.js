@@ -1,5 +1,4 @@
-import typescript from "@rollup/plugin-typescript";
-import babel from "@rollup/plugin-babel";
+import typescript from 'rollup-plugin-typescript2';
 
 export default {
   input: "src/index.ts",
@@ -8,10 +7,7 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    typescript(),
-    babel({
-      babelHelpers: "inline",
-    }),
+    typescript()
   ],
-  external: ["react", "rxjs/operators", "rxjs" , "uuid"],
+  external: ['react', '@pixel-dust/base'],
 };

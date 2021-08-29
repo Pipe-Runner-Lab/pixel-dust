@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "lib": ["DOM", "ES5"],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "allowSyntheticDefaultImports": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": false,
     "esModuleInterop": true,
@@ -18,7 +23,7 @@
     "emitDecoratorMetadata": true,
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "./dist/types"
+    "declarationDir": "./dist"
   },
   "include": ["src"],
   "exclude": ["node_modules"]
