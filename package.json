@@ -13,6 +13,7 @@
   "scripts": {
     "clean": "lerna clean",
     "dev": "lerna run start --stream --parallel",
+    "publish": "lerna publish from-package",
     "build": "lerna run build --stream",
     "base:dev": "lerna --scope @pixel-dust/base run start --stream",
     "base:build": "lerna --scope @pixel-dust/base run build --stream",
