@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayerMetaData } from '@pixel-dust/base';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import { VscAdd as AddLayerIcon, VscRemove as DeleteLayerIcon } from 'react-icons/vsc';
 import { BiUpArrow as UpwardArrowIcon, BiDownArrow as DownwardArrowIcon } from 'react-icons/bi';
 import { BsEye as VisibleIcon, BsEyeSlash as HiddenIcon } from 'react-icons/bs';

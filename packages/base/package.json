@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch",
-    "prepublishOnly": "yarn install && yarn build"
+    "prepublishOnly": "rimraf ./dist && npm install && npm run build"
   },
   "dependencies": {
     "rxjs": "^7.3.0",

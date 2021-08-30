@@ -2,16 +2,15 @@
   "name": "@pixel-dust/root",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "website"
-    ]
-  },
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
   "scripts": {
-    "clean": "lerna clean",
+    "clean": "lerna clean && rimraf ./node_modules",
     "publish": "lerna publish from-package",
     "dev": "lerna run start --stream --parallel",
     "build": "lerna run build --stream",

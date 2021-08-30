@@ -6,16 +6,16 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@pixel-dust/base": "0.0.0",
+    "@pixel-dust/base": "^0.0.0",
     "react": "^17.0.2"
   },
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch",
-    "prepublishOnly": "yarn install && yarn build"
+    "prepublishOnly": "rimraf ./dist && npm install && npm run build"
   },
   "devDependencies": {
-    "@pixel-dust/base": "0.0.0",
+    "@pixel-dust/base": "^0.0.0",
     "react": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",
