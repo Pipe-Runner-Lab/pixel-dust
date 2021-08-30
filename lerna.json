@@ -4,6 +4,6 @@
     "website"
   ],
   "useWorkspaces": true,
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "version": "0.0.0"
 }
