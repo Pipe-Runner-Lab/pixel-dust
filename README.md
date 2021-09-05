@@ -17,15 +17,11 @@ We are using lerna for the following:
 - Single point command execution for multiple package. (clean, dev, build)
 - Publishing
 - CI/CD
-- Initial bootstrapping is done using lerna commands but it is not mandatory and you can get away with `npm install`.
+- Initial bootstrapping is done using lerna which includes installation and local package linking. This is a very important step and needs to be done only once. Subsequent package installations can be done using `npm install` only.
 
 If you don't have lerna installed globally, then you can keep using `npx` to execute it from the registry or from your local installation (whichever it finds first).
 
 Go ahead and execute the following from the project root:
-```bash
-npm install
-```
-or
 ```bash
 npx lerna bootstrap
 ```
