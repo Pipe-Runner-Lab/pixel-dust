@@ -23,9 +23,9 @@ If you don't have lerna installed globally, then you can keep using `npx` to exe
 
 Go ahead and execute the following from the project root:
 ```bash
-npx lerna bootstrap
+npm run bootstrap
 ```
-
+This command will install, link local dependencies and will do an instal build of required packages in order to make sure development bundlers on watch mode end up having the required dependencies as topology is hard to maintain during parallel execution. [#1444](/home/humble_d/.npm/_logs/2021-09-06T19_13_19_598Z-debug.log)
 > Note: The project is configured to make use of yarn workspaces, so you can install node modules without worrying too much about hoisting. Also, installing modules in the respective packages is the right way to go as it keeps dependencies explicit.  
 
 ### Starting development
