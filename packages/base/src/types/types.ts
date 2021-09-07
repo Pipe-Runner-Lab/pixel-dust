@@ -117,17 +117,24 @@ export type PixelSquareCommand = BaseCommand & {
   size?: number;
 };
 
+export type PixelCircleCommand = BaseCommand & {
+  instrument: InstrumentType.PIXEL_CIRCLE;
+  color: string;
+  size?: number;
+};
+
+
 export type EraserCommand = BaseCommand & {
   instrument: InstrumentType.ERASER;
   size?: number;
 };
 
-export type CanvasCommands = PenCommand | EraserCommand | PixelSquareCommand;
+export type CanvasCommands = PenCommand | EraserCommand | PixelSquareCommand | PixelCircleCommand;
 
 /** Command History types */
 
 export type HistoryCanvasCommands = {
-  instrument: InstrumentType.PEN | InstrumentType.ERASER | InstrumentType.PIXEL_SQUARE;
+  instrument: InstrumentType.PEN | InstrumentType.ERASER | InstrumentType.PIXEL_SQUARE | InstrumentType.PIXEL_CIRCLE;
   color: string | undefined;
   activeLayerUuid: string;
   cartesianArray: { x: number; y: number }[];
