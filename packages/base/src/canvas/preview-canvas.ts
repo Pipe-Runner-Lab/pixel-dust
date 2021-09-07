@@ -1,3 +1,4 @@
+import { coordinateArray } from 'utils/canvas-coordinates';
 import { CanvasCommands, CanvasType, InstrumentType } from '../types/types';
 
 class PreviewCanvas {
@@ -54,6 +55,23 @@ class PreviewCanvas {
           this.tileDimension * 5
         );
         break;
+      case InstrumentType.PIXEL_CIRCLE:
+          this.ctx.fillStyle = command.color.replace(/[\d.]+\)$/g, '0.4)');
+          this.ctx.fillRect(
+            Math.round(command.x * this.tileDimension - 16),
+            Math.round(command.y * this.tileDimension - 16),
+            this.tileDimension * 5,
+            this.tileDimension * 5
+          );
+          for (let i = 0; i < 12; i += 1) {
+            this.ctx.fillRect(
+              Math.round(command.x * this.tileDimension + coordinateArray[i][0]),
+              Math.round(command.y * this.tileDimension + coordinateArray[i][1]),
+              this.tileDimension,
+              this.tileDimension
+            );
+          }
+          break;
       case InstrumentType.ERASER:
         this.ctx.fillStyle = '#ffffff';
         this.ctx.fillRect(
@@ -86,6 +104,22 @@ class PreviewCanvas {
           this.tileDimension * 5
         );
         break;
+      case InstrumentType.PIXEL_CIRCLE:
+          this.ctx.clearRect(
+            Math.round(this.lastCommand.x * this.tileDimension - 16),
+            Math.round(this.lastCommand.y * this.tileDimension - 16),
+            this.tileDimension * 5,
+            this.tileDimension * 5
+          );
+          for (let i = 0; i < 12; i += 1) {
+            this.ctx.clearRect(
+              Math.round(this.lastCommand.x * this.tileDimension + coordinateArray[i][0]),
+              Math.round(this.lastCommand.y * this.tileDimension + coordinateArray[i][1]),
+              this.tileDimension,
+              this.tileDimension
+            );
+          }
+          break;
       case InstrumentType.ERASER:
         this.ctx.clearRect(
           Math.round(this.lastCommand.x * this.tileDimension),

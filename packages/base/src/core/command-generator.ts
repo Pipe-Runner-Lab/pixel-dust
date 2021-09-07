@@ -4,6 +4,7 @@ import {
   CanvasType,
   PenCommand,
   PixelSquareCommand,
+  PixelCircleCommand,
   EraserCommand,
   InstrumentType,
   CanvasCommands,
@@ -55,6 +56,14 @@ class CommandGenerator {
               color: this.drawingState.foregroundColor,
               instrument: InstrumentType.PIXEL_SQUARE
             } as PixelSquareCommand;
+            case InstrumentType.PIXEL_CIRCLE:
+              return {
+                x,
+                y,
+                color: this.drawingState.foregroundColor,
+                instrument: InstrumentType.PIXEL_CIRCLE
+              } as PixelCircleCommand;
+            
           case InstrumentType.ERASER:
             return {
               x,
@@ -103,6 +112,14 @@ class CommandGenerator {
               color: this.drawingState.foregroundColor,
               instrument: InstrumentType.PIXEL_SQUARE
             } as PixelSquareCommand;
+          case InstrumentType.PIXEL_CIRCLE:
+              return {
+                x,
+                y,
+                color: this.drawingState.foregroundColor,
+                instrument: InstrumentType.PIXEL_CIRCLE
+              } as PixelCircleCommand;
+            
           case InstrumentType.ERASER:
             return {
               x,
