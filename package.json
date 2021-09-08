@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "bootstrap": "npx lerna bootstrap && lerna run build --ignore @pixel-dust/website",
+    "version": "npx lerna version",
     "clean": "lerna clean && rimraf ./node_modules",
     "publish": "lerna publish from-package",
     "dev": "lerna run start --stream --parallel",
