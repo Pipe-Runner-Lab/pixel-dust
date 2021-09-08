@@ -12,10 +12,10 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch",
-    "prepublishOnly": "rimraf ./dist && npm install && npm run build"
+    "prepublishOnly": "rimraf ./dist && npm run build"
   },
   "devDependencies": {
-    "@pixel-dust/base": "^0.1.0",
+    "@pixel-dust/base": "0.1.0",
     "react": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",
@@ -25,5 +25,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "68dab0d941c41013232778dc835fdb34c3286714"
+  "gitHead": "275b4299e58626aef22d314f51727e6ac801e6f3"
 }
