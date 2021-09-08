@@ -15,7 +15,7 @@
     "prepublishOnly": "rimraf ./dist && npm install && npm run build"
   },
   "devDependencies": {
-    "@pixel-dust/base": "0.1.0",
+    "@pixel-dust/base": "^0.1.0",
     "react": "^17.0.2",
     "rollup": "^2.56.3",
     "rollup-plugin-typescript2": "^0.30.0",
@@ -25,5 +25,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "6a97ff7e6ac5f362d41f44c444b8548ec2c44e5b"
+  "gitHead": "68dab0d941c41013232778dc835fdb34c3286714"
 }
