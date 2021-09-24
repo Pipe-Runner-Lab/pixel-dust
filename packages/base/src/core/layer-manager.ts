@@ -343,6 +343,7 @@ class LayerManager {
 
     const ctx = exportCanvas.getContext('2d');
     this.layerStack.forEach((layer) => {
+      if(!layer.hidden)
       ctx?.drawImage(layer.pixelCanvas.canvas, 0, 0, this.dimension, this.dimension);
     });
 
